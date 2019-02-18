@@ -15,6 +15,11 @@ using System.Threading.Tasks;
 
 namespace Ying.YingWindows
 {
+    public enum YingLogType
+    {
+        YInfo, YSuccess, YWarn, YError
+    }
+
     public partial class YingWindow : Window
     {
         /*private const string _forgeListUrl = "https://bmclapi2.bangbang93.com/forge/minecraft/";
@@ -29,10 +34,7 @@ namespace Ying.YingWindows
         private static List<ForgeInfo> VersionForges = new List<ForgeInfo>();
         */
 
-        public enum YingLogType
-        {
-            YInfo, YSuccess, YWarn, YError
-        }
+
 
         private List<String> ycommands = new List<String>();
 
@@ -49,6 +51,7 @@ namespace Ying.YingWindows
             getYCommand("restart").setYExecutor(new YingRestart()).setYDescribe("A Ying provided command.");
             getYCommand("ytools").setYExecutor(new YingTools()).setYDescribe("A Ying provided command.");
             getYCommand("tell").setYExecutor(new YingTell()).setYDescribe("A Ying provided command.").setYUsage("/tell <player> <private message...>");
+            getYCommand("Ying").setYExecutor(new YingCommands.Ying()).setYDescribe("A Ying provided command.");
             ///tell <player> <private message...>
             
             

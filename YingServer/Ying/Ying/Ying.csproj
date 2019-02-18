@@ -117,13 +117,13 @@
     <Compile Include="LitJson\JsonWriter.cs" />
     <Compile Include="LitJson\Lexer.cs" />
     <Compile Include="LitJson\ParserToken.cs" />
+    <Compile Include="YingCommands\Ying.cs" />
     <Compile Include="YingCommands\YingHelp.cs" />
     <Compile Include="YingCommands\YingList.cs" />
     <Compile Include="YingCommands\YingRestart.cs" />
     <Compile Include="YingCommands\YingSay.cs" />
     <Compile Include="YingCommands\YingStop.cs" />
     <Compile Include="YingCommands\YingTell.cs" />
-    <Compile Include="YingCommands\YingTools.cs" />
     <Compile Include="YingCommand\YingCommandExecutor.cs" />
     <Compile Include="YingCommand\YingCommandInfo.cs" />
     <Compile Include="YingCommand\YingCommandManager.cs" />

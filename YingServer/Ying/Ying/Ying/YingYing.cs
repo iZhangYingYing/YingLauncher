@@ -94,9 +94,10 @@ namespace Ying
             return ydatabasemanager;
         }
 
-        public static YingSettings getYSettings()
+        public static YingSettings getYSettings(Boolean yreload = false)
         {
-            if(ysettings.yid == null)
+            if (yreload) ysettings.yid = null;
+            if (ysettings.yid == null)
             {
                 getYDataBaseManager().getYConnection().Table<zyy_settings>().ToList().ForEach((y) => {
                     switch(y.ykey)

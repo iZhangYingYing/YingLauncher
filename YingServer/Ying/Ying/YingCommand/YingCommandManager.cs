@@ -23,7 +23,7 @@ namespace Ying.YingCommand
             }
             else
             {
-                YCommands.Add(YCommand, new YingCommandInfo());
+                YCommands.Add(YCommand.ToLower(), new YingCommandInfo());
                 return YCommands[YCommand];
             }
         }
@@ -33,11 +33,11 @@ namespace Ying.YingCommand
             YingApp.Current.Dispatcher.InvokeAsync(() =>
             {
                 
-                List<String> YYCommand = YCommand.Split(' ').ToList<String>();
+                List<String> YYCommand = YCommand.ToLower().Split(' ').ToList<String>();
 
                 if (YCommands.ContainsKey(YYCommand[0]))
                 {
-                    YingCommandInfo ycommand = YCommands[YYCommand[0]];
+                    YingCommandInfo ycommand = this.YCommands[YYCommand[0]];
 
                     int yline = getYConsole().sendYMessage("Console issued server command: /" + YYCommand[0]);
 
