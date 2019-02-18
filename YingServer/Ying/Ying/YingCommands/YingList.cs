@@ -16,6 +16,7 @@ namespace Ying.YingCommands
     {
         public Boolean onYCommand(String YSender, YingCommandInfo YCommand, String YLabel, String[] YArgs)
         {
+            getYServer().getYService().
             getYConsole().sendYMessage($"There are {getYServer().getYClients().Count}/20020604 players online:");
             foreach (KeyValuePair<String, YingBehavior> y in getYServer().getYClients())
             {

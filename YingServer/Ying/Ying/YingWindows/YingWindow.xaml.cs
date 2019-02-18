@@ -49,7 +49,6 @@ namespace Ying.YingWindows
             getYCommand("say").setYExecutor(new YingSay()).setYDescribe("A Ying provided command.").setYUsage("/say <ymessage...>");
             getYCommand("stop").setYExecutor(new YingStop()).setYDescribe("A Ying provided command.");
             getYCommand("restart").setYExecutor(new YingRestart()).setYDescribe("A Ying provided command.");
-            getYCommand("ytools").setYExecutor(new YingTools()).setYDescribe("A Ying provided command.");
             getYCommand("tell").setYExecutor(new YingTell()).setYDescribe("A Ying provided command.").setYUsage("/tell <player> <private message...>");
             getYCommand("Ying").setYExecutor(new YingCommands.Ying()).setYDescribe("A Ying provided command.");
             ///tell <player> <private message...>

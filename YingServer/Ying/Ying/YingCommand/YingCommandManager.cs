@@ -17,23 +17,25 @@ namespace Ying.YingCommand
         private Dictionary<String, YingCommandInfo> YCommands = new Dictionary<String, YingCommandInfo>();
 
         public YingCommandInfo getYCommand(String YCommand) {
+            YCommand = YCommand.ToLower();
             if (YCommands.ContainsKey(YCommand))
             {
                 return YCommands[YCommand];
             }
             else
             {
-                YCommands.Add(YCommand.ToLower(), new YingCommandInfo());
+                YCommands.Add(YCommand, new YingCommandInfo());
                 return YCommands[YCommand];
             }
         }
 
         public void runYCommandAsync(String YCommand)
         {
+            YCommand = YCommand.ToLower();
             YingApp.Current.Dispatcher.InvokeAsync(() =>
             {
                 
-                List<String> YYCommand = YCommand.ToLower().Split(' ').ToList<String>();
+                List<String> YYCommand = YCommand.Split(' ').ToList<String>();
 
                 if (YCommands.ContainsKey(YYCommand[0]))
                 {
