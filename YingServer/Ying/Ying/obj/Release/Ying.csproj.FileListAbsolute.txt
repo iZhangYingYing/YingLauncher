@@ -1,0 +1,13 @@
+Z:\Ying\YingServer\Ying\Ying\obj\Release\Ying.csprojAssemblyReference.cache
+Z:\Ying\YingServer\Ying\Ying\obj\Release\Ying.exe.config
+Z:\Ying\YingServer\Ying\Ying\obj\Release\YingControls\YingLoadingControl.baml
+Z:\Ying\YingServer\Ying\Ying\obj\Release\YingWindows\YingWindow.baml
+Z:\Ying\YingServer\Ying\Ying\obj\Release\YingApp.baml
+Z:\Ying\YingServer\Ying\Ying\obj\Release\YingControls\YingItems\YingConsoleMessageItem.g.cs
+Z:\Ying\YingServer\Ying\Ying\obj\Release\YingControls\YingLoadingControl.g.cs
+Z:\Ying\YingServer\Ying\Ying\obj\Release\YingWindows\YingMessageBox.g.cs
+Z:\Ying\YingServer\Ying\Ying\obj\Release\YingWindows\YingWindow.g.cs
+Z:\Ying\YingServer\Ying\Ying\obj\Release\YingApp.g.cs
+Z:\Ying\YingServer\Ying\Ying\obj\Release\Ying_Content.g.cs
+Z:\Ying\YingServer\Ying\Ying\obj\Release\Ying_MarkupCompile.cache
+Z:\Ying\YingServer\Ying\Ying\obj\Release\Ying_MarkupCompile.lref

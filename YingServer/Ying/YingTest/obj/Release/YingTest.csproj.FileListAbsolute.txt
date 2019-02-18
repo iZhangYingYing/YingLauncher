@@ -1,0 +1,12 @@
+Z:\Ying\YingServer\Ying\YingTest\bin\Release\YingTest.exe.config
+Z:\Ying\YingServer\Ying\YingTest\bin\Release\YingTest.exe
+Z:\Ying\YingServer\Ying\YingTest\bin\Release\YingTest.pdb
+Z:\Ying\YingServer\Ying\YingTest\bin\Release\Rebex.Common.dll
+Z:\Ying\YingServer\Ying\YingTest\bin\Release\Rebex.Mail.dll
+Z:\Ying\YingServer\Ying\YingTest\bin\Release\Rebex.Common.xml
+Z:\Ying\YingServer\Ying\YingTest\bin\Release\Rebex.Mail.xml
+Z:\Ying\YingServer\Ying\YingTest\obj\Release\YingTest.csprojAssemblyReference.cache
+Z:\Ying\YingServer\Ying\YingTest\obj\Release\YingTest.csproj.CoreCompileInputs.cache
+Z:\Ying\YingServer\Ying\YingTest\obj\Release\YingTest.csproj.CopyComplete
+Z:\Ying\YingServer\Ying\YingTest\obj\Release\YingTest.exe
+Z:\Ying\YingServer\Ying\YingTest\obj\Release\YingTest.pdb

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,12 +17,12 @@ namespace Ying.YingCommands
     {
         public Boolean onYCommand(String YSender, YingCommandInfo YCommand, String YLabel, String[] YArgs)
         {
-            getYServer().getYService().
-            getYConsole().sendYMessage($"There are {getYServer().getYClients().Count}/20020604 players online:");
+            getYConsole().sendYMessage(JsonConvert.SerializeObject(getYServer().getYService()));
+            /*getYConsole().sendYMessage($"There are {getYServer().getYClients().Count}/20020604 players online:");
             foreach (KeyValuePair<String, YingBehavior> y in getYServer().getYClients())
             {
                 getYConsole().sendYMessage(y.Key + " | " + y.Value.StartTime);
-            }
+            }*/
             return true;
         }
     }

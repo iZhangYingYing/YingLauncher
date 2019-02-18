@@ -1,0 +1,6 @@
+Z:\Ying\HttpHelper\bin\Release\HttpHelper.dll
+Z:\Ying\HttpHelper\bin\Release\HttpHelper.pdb
+Z:\Ying\HttpHelper\obj\Release\HttpHelper.csprojAssemblyReference.cache
+Z:\Ying\HttpHelper\obj\Release\HttpHelper.csproj.CoreCompileInputs.cache
+Z:\Ying\HttpHelper\obj\Release\HttpHelper.dll
+Z:\Ying\HttpHelper\obj\Release\HttpHelper.pdb

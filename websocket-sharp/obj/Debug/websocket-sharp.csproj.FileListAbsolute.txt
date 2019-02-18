@@ -1,6 +1,5 @@
 Z:\Ying\websocket-sharp\bin\Debug\websocket-sharp.dll
 Z:\Ying\websocket-sharp\bin\Debug\websocket-sharp.pdb
-Z:\Ying\websocket-sharp\obj\Debug\websocket-sharp.csprojAssemblyReference.cache
 Z:\Ying\websocket-sharp\obj\Debug\websocket-sharp.csproj.CoreCompileInputs.cache
 Z:\Ying\websocket-sharp\obj\Debug\websocket-sharp.dll
 Z:\Ying\websocket-sharp\obj\Debug\websocket-sharp.pdb

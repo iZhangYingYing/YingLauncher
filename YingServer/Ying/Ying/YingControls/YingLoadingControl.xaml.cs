@@ -41,9 +41,9 @@ namespace Ying.YingControls
             this.yloadingimage.Margin = new System.Windows.Thickness(0, -24.64, 0, 0);
             this.ycontent.Children.Add(yloadingimage);
 
-            ThemeManager.ChangeAppStyle(YingApp.Current,
+            /*ThemeManager.ChangeAppStyle(YingApp.Current,
                                         ThemeManager.GetAccent("Blue"),
-                                        ThemeManager.GetAppTheme("BaseLight"));
+                                        ThemeManager.GetAppTheme("BaseLight"));*/
 
 
             this.Loaded += (ysender, yevent) =>

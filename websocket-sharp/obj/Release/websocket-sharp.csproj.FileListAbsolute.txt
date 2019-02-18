@@ -1,0 +1,4 @@
+Z:\Ying\websocket-sharp\bin\Release\websocket-sharp.dll
+Z:\Ying\websocket-sharp\obj\Release\websocket-sharp.csprojAssemblyReference.cache
+Z:\Ying\websocket-sharp\obj\Release\websocket-sharp.csproj.CoreCompileInputs.cache
+Z:\Ying\websocket-sharp\obj\Release\websocket-sharp.dll

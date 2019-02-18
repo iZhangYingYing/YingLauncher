@@ -66,13 +66,19 @@ namespace Ying.YingCommands
                         {
                             if(YArgs[1] == "set")
                             {
-                                if(YArgs.Length > 2)
+                                if (YArgs.Length > 2)
                                 {
-                                    zyy_settings ysetting = (from y in getYDataBaseManager().getYConnection().Table<zyy_settings>()
-                                                       where y.ykey == YArgs[2]
-                                                       select y).FirstOrDefault();
-                                    ysetting.yvalue = YArgs[3];
-                                    getYSettings(true);
+                                    getYDataBaseManager().getYConnection().Table<zyy_settings>().ToList().ForEach((y) => {
+                                        if (y.ykey == YArgs[2]) getYDataBaseManager().getYConnection().InsertOrReplace(new zyy_settings
+                                        {
+                                            yid = y.yid,
+                                            ykey = y.ykey,
+                                            yvalue = YArgs[3],
+                                            ydescription = y.ydescription
+                                        });
+                                    });
+
+                                        getYSettings(true);
                                 }
                             }
                         }

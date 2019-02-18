@@ -245,7 +245,10 @@ namespace Ying.YingWindows
                 Left = -5.64
             };
 
-            return ylist.Items.Add(yitem);
+            int yline = ylist.Items.Add(yitem);
+            ylist.ScrollIntoView(yitem);
+
+            return yline;
         };
 
         private Action<ListView, int, YingLogType, String, long, DateTime> ysetMessage = (ylist, yline, ytype, ymessage, yspend, ytime) =>

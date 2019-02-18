@@ -11,7 +11,6 @@ namespace Ying.YingDataBase.YingDataStructs
         public String ykey { get; set; }
         public String yvalue { get; set; }
 
-        [Ignore]
         public String ydescription { get; set; }
     }
 }
