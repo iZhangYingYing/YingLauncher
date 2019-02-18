@@ -1,0 +1,52 @@
+﻿<Grid x:Class="Ying.Controls.OtherSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="290" Width="630">
+
+    <Grid.RowDefinitions>
+        <RowDefinition/>
+        <RowDefinition Height="32"/>
+        <RowDefinition Height="32"/>
+        <RowDefinition Height="32"/>
+        <RowDefinition Height="32"/>
+        <RowDefinition Height="32"/>
+        <RowDefinition/>
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="110"/>
+        <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+
+    <TextBlock Text="下载源选择" Style="{StaticResource InfoTextBlockStyle}" Grid.Row="1" Margin="7,0,0,0"/>
+    <TextBlock Text="启动后行为" Style="{StaticResource InfoTextBlockStyle}" Grid.Row="2" Margin="7,0,0,0"/>
+    <TextBlock Text="窗口标题" Style="{StaticResource InfoTextBlockStyle}" Grid.Row="3" Margin="7,0,0,0"/>
+    <TextBlock Text="附加参数" Style="{StaticResource InfoTextBlockStyle}" Grid.Row="4" Margin="7,0,0,0"/>
+
+    <ComboBox Grid.Row="1" Grid.Column="1" Width="490" HorizontalAlignment="Left" 
+              SelectedIndex="{Binding DownloadSource, Mode=TwoWay}">
+        <ComboBox.Items>
+            <ComboBoxItem Content="官方"/>
+            <ComboBoxItem Content="BMCLAPI"/>
+        </ComboBox.Items>
+    </ComboBox>
+
+    <ComboBox Grid.Row="2" Grid.Column="1" Width="490" HorizontalAlignment="Left" 
+              SelectedIndex="{Binding AfterLaunchBehavior, Mode=TwoWay}">
+        <ComboBox.Items>
+            <ComboBoxItem Content="隐藏并后台运行"/>
+            <ComboBoxItem Content="直接退出"/>
+            <ComboBoxItem Content="保持窗体可见"/>
+        </ComboBox.Items>
+    </ComboBox>
+    
+    <TextBox Grid.Row="3" Grid.Column="1" Width="490" Height="24"
+             Text="{Binding WindowTitle}"/>
+    
+    <TextBox Grid.Row="4" Grid.Column="1" Width="490" Height="24"
+             Text="{Binding AdvancedArgs}"/>
+    
+    <CheckBox Content="版本隔离" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" Margin="28,0"
+              IsChecked="{Binding IsVersionSplit}"/>
+
+</Grid>

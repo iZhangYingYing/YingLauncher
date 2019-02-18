@@ -1,0 +1,11 @@
+D:\Programs\C#\QQMusic\SourceCode\MicroTools\bin\x86\Release\MicroTools.dll
+D:\Programs\C#\QQMusic\SourceCode\MicroTools\bin\x86\Release\MicroTools.pdb
+D:\Programs\C#\QQMusic\SourceCode\MicroTools\obj\x86\Release\GeneratedInternalTypeHelper.g.cs
+D:\Programs\C#\QQMusic\SourceCode\MicroTools\obj\x86\Release\MicroTools_MarkupCompile.cache
+D:\Programs\C#\QQMusic\SourceCode\MicroTools\obj\x86\Release\MicroTools_MarkupCompile.lref
+D:\Programs\C#\QQMusic\SourceCode\MicroTools\obj\x86\Release\Themes\Generic.baml
+D:\Programs\C#\QQMusic\SourceCode\MicroTools\obj\x86\Release\MicroTools.g.resources
+D:\Programs\C#\QQMusic\SourceCode\MicroTools\obj\x86\Release\MicroTools.Properties.Resources.resources
+D:\Programs\C#\QQMusic\SourceCode\MicroTools\obj\x86\Release\MicroTools.csproj.GenerateResource.Cache
+D:\Programs\C#\QQMusic\SourceCode\MicroTools\obj\x86\Release\MicroTools.dll
+D:\Programs\C#\QQMusic\SourceCode\MicroTools\obj\x86\Release\MicroTools.pdb

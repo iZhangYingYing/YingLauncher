@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Ying.YingControls.YingLoadingControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ycontrols="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             mc:Ignorable="d" 
+             Height="200.64" Width="764.64">
+    <Grid Name="ycontent">
+        <ycontrols:MetroProgressBar Name="yprogress" Width="764.64" Height="3.64" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ycontrols:ProgressRing Width="48.64" Height="48.64" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 6.4, 6.4"/>
+        <Image Name="ysuccess" Width="132.64" Height="132.64" Source="{StaticResource yimages.ysuccess}" Margin="0, -24.64, 0, 0" Visibility="Collapsed"/>
+        <TextBlock Name="yinfo" Text="Ying" TextAlignment="Center" TextWrapping="NoWrap" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 0, 0, 24.64"/>
+        <TextBlock Name="ydescription" Text="Zhang Ying Ying" TextAlignment="Center" TextWrapping="Wrap" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 0, 0, 6.64"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,96 @@
+﻿<Window  x:Class="Ying.YingWindows.YingMusicWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:Ying.YingControls"
+        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"   
+        AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize"
+        Topmost="False"  ShowInTaskbar="False"
+        Title="YingMusicWindow" Width="180.64" Height="280.64">
+
+    <Window.Resources>
+        <WindowChrome x:Key="WindowChromKey">
+            <WindowChrome.ResizeBorderThickness>
+                <Thickness>0</Thickness>
+            </WindowChrome.ResizeBorderThickness>
+        </WindowChrome>
+    </Window.Resources>
+
+    <Grid Name="YContent">
+        <Grid.Background>
+            <ImageBrush ImageSource="{StaticResource yimages.yybackground}" Stretch="Fill" />
+        </Grid.Background>
+
+        
+
+
+        <Grid VerticalAlignment="Bottom" Margin="0, 0, 0, 110.604" Height="46.604">
+            <TextBlock Name="yname" Text="Ying" TextAlignment="Center"
+                   FontSize="20.604" Foreground="White" />
+            <TextBlock TextAlignment="Center"
+                   FontSize="12.604" Foreground="LightGray" VerticalAlignment="Bottom" >
+                <Run FontSize="16.604">-  </Run>
+                <Run Name="yartist">Zhang Ying Ying</Run>
+                <Run FontSize="16.604">   -</Run>
+            </TextBlock>
+        </Grid>
+        
+
+        <Controls:YingLyricView 
+            x:Name="ylyric"
+            Grid.Row="1"
+            Margin="0, 0, 0, 38.64"            
+            Height="57.64"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"/>
+        <Grid Height="38.64" VerticalAlignment="Bottom">
+            <Button
+                Name="yplaytoggle"
+                Style="{StaticResource GlowIconButtonStyle}"
+                BorderBrush="Transparent"
+                BorderThickness="0"
+                DataContext="Ying"
+                Width="32" Height="32"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="6.4, 0, 0, 0"
+                Padding="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="{StaticResource yimages.ymusic.yplay}" Stretch="Fill"/>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Name="yfavorite"
+                Style="{StaticResource GlowIconButtonStyle}"
+                BorderBrush="Transparent"
+                BorderThickness="0"
+                DataContext="Ying"
+                Width="32" Height="32"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Margin="6.4, 0, 40.64, 0" Padding="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="{StaticResource yimages.ymusic.ylike}" Stretch="Fill"/>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Name="ymore"
+                Style="{StaticResource GlowIconButtonStyle}"
+                BorderBrush="Transparent"
+                BorderThickness="0"
+                DataContext="Ying"
+                Width="32" Height="32"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Margin="6.4, 0, 6.4, 0" Padding="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="{StaticResource yimages.ymusic.ymore}" Stretch="Fill"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

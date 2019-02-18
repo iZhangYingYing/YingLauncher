@@ -1,0 +1,13 @@
+Z:\Ying\MicroTools\bin\Debug\MicroTools.dll
+Z:\Ying\MicroTools\bin\Debug\MicroTools.pdb
+Z:\Ying\MicroTools\obj\Debug\GeneratedInternalTypeHelper.g.cs
+Z:\Ying\MicroTools\obj\Debug\MicroTools_MarkupCompile.cache
+Z:\Ying\MicroTools\obj\Debug\MicroTools_MarkupCompile.lref
+Z:\Ying\MicroTools\obj\Debug\Themes\Generic.baml
+Z:\Ying\MicroTools\obj\Debug\MicroTools.g.resources
+Z:\Ying\MicroTools\obj\Debug\MicroTools.Properties.Resources.resources
+Z:\Ying\MicroTools\obj\Debug\MicroTools.csproj.GenerateResource.cache
+Z:\Ying\MicroTools\obj\Debug\MicroTools.csproj.CoreCompileInputs.cache
+Z:\Ying\MicroTools\obj\Debug\MicroTools.dll
+Z:\Ying\MicroTools\obj\Debug\MicroTools.pdb
+Z:\Ying\MicroTools\obj\Debug\MicroTools.csprojAssemblyReference.cache

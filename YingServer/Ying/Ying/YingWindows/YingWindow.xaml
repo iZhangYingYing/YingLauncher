@@ -1,0 +1,55 @@
+﻿<Window x:Class="Ying.YingWindows.YingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+        Height="440.604" Width="800.604" Background="Black"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        RenderOptions.BitmapScalingMode="HighQuality" SnapsToDevicePixels="True"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"> <!--Background="{x:Null}"-->
+
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="{StaticResource yimages.ybackground}"/>
+        </Grid.Background>
+
+        <!-- Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="23"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="49"/>
+        </Grid.ColumnDefinitions -->
+
+
+
+        <ListView x:Name="yloglist" Style="{StaticResource GridListViewStyle}"
+            Height="364.64" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Ying Console" Width="800" />
+                    <!-- DisplayMemberBinding="{Binding YMessage, Mode=OneWay}" -->
+                    <!-- GridViewColumn Header="修改日期" Width="90.64" DisplayMemberBinding="{Binding ModifiedTime, Mode=OneWay}"/ -->
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <TextBox Name="ycommand" Grid.Row="2" Width="684.64" Height="26" Margin="10.64, 0, 0, 18.64"
+             Text="{Binding JavaPath, Mode=TwoWay}" VerticalAlignment="Bottom"/>
+
+
+        <Button Name="_launchButton" Content="执行" Style="{StaticResource GlowNormalButtonStyle}"
+                Grid.Row="2" Width="80" Height="26" HorizontalAlignment="Right" Margin="10, 0, 10, 18.64" Click="YRun" ToolTip="Let's Run!" FontSize="15" 
+                IsEnabled="{Binding HasAnyVersion, Mode=OneWay}" VerticalAlignment="Bottom"/>
+
+        <TextBlock x:Name="ystatusBox" Visibility="Visible" Style="{StaticResource InfoTextBlockStyle}" Height="20" FontSize="14" Text="颖颖颖颖颖颖颖颖颖颖颖" VerticalAlignment="Bottom" Margin="10, 0, 0, 48.604"/>
+    </Grid>
+
+
+</Window>

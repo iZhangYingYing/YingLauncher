@@ -1,0 +1,8 @@
+Z:\Ying\YingClient\Ying\YingWave\bin\Debug\YingWave.dll
+Z:\Ying\YingClient\Ying\YingWave\bin\Debug\YingWave.pdb
+Z:\Ying\YingClient\Ying\YingWave\obj\Debug\YingWave.csprojAssemblyReference.cache
+Z:\Ying\YingClient\Ying\YingWave\obj\Debug\Ying.YingWinFormControls.WaveForm.resources
+Z:\Ying\YingClient\Ying\YingWave\obj\Debug\YingWave.csproj.GenerateResource.cache
+Z:\Ying\YingClient\Ying\YingWave\obj\Debug\YingWave.csproj.CoreCompileInputs.cache
+Z:\Ying\YingClient\Ying\YingWave\obj\Debug\YingWave.dll
+Z:\Ying\YingClient\Ying\YingWave\obj\Debug\YingWave.pdb

@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Ying">
+
+    
+    <ImageSource x:Key="yimages.ybackground">/yresources/yimages/ybackground.bmp</ImageSource>
+    <ImageSource x:Key="yimages.yybackground">/yresources/yimages/yybackground.jpg</ImageSource>
+
+    <ImageSource x:Key="yimages.yicons.yok">/yresources/yimages/yicons/yok.gif</ImageSource>
+    <ImageSource x:Key="yimages.yicons.yno">/yresources/yimages/yicons/yno.gif</ImageSource>
+    <ImageSource x:Key="yimages.yicons.yface.smile">/yresources/yimages/yicons/yface.smile.gif</ImageSource>
+    <ImageSource x:Key="yimages.yicons.yface.cry">/yresources/yimages/yicons/yface.cry.gif</ImageSource>
+    <ImageSource x:Key="yimages.yicons.yhelp">/yresources/yimages/yicons/yhelp.gif</ImageSource>
+    <ImageSource x:Key="yimages.yicons.ytip">/yresources/yimages/yicons/ytip.gif</ImageSource>
+    <ImageSource x:Key="yimages.yicons.yencrypted">/yresources/yimages/yicons/yencrypted.gif</ImageSource>
+
+    <ImageSource x:Key="yimages.ymusic.yplay">/yresources/yimages/btn_recognize_play_song.png</ImageSource>
+    <ImageSource x:Key="yimages.ymusic.ypause">/yresources/yimages/btn_recognize_pause_song.png</ImageSource>
+    <ImageSource x:Key="yimages.ymusic.ylike">/yresources/yimages/recognize_tingge_black_like.png</ImageSource>
+    <ImageSource x:Key="yimages.ymusic.ylike.selected">/yresources/yimages/recognize_tingge_black_like_selected.png</ImageSource>
+    <ImageSource x:Key="yimages.ymusic.ymore">/yresources/yimages/recognize_tingge_black_more.png</ImageSource>
+    
+</ResourceDictionary>

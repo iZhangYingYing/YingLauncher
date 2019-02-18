@@ -1,0 +1,15 @@
+Z:\Ying\YingResolver\YingTest\bin\Debug\YingTest.exe.config
+Z:\Ying\YingResolver\YingTest\bin\Debug\YingTest.exe
+Z:\Ying\YingResolver\YingTest\bin\Debug\YingTest.pdb
+Z:\Ying\YingResolver\YingTest\bin\Debug\YingResolver.dll
+Z:\Ying\YingResolver\YingTest\bin\Debug\YingResolver.pdb
+Z:\Ying\YingResolver\YingTest\obj\Debug\YingTest.csprojAssemblyReference.cache
+Z:\Ying\YingResolver\YingTest\obj\Debug\YingTest.csproj.CoreCompileInputs.cache
+Z:\Ying\YingResolver\YingTest\obj\Debug\YingTest.csproj.CopyComplete
+Z:\Ying\YingResolver\YingTest\obj\Debug\YingTest.exe
+Z:\Ying\YingResolver\YingTest\obj\Debug\YingTest.pdb
+Z:\Ying\YingResolver\YingTest\bin\Debug\HttpHelper.dll
+Z:\Ying\YingResolver\YingTest\bin\Debug\HttpHelper.pdb
+Z:\Ying\YingResolver\YingTest\bin\Debug\Newtonsoft.Json.dll
+Z:\Ying\YingResolver\YingTest\bin\Debug\Newtonsoft.Json.pdb
+Z:\Ying\YingResolver\YingTest\bin\Debug\Newtonsoft.Json.xml

@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Ying">
+
+    <ImageSource x:Key="yimages.ybackground">/yresources/yimages/ybackground.jpg</ImageSource>
+    <ImageSource x:Key="yimages.ysuccess">/yresources/yimages/ysuccess.png</ImageSource>
+
+    <ImageSource x:Key="yimages.ymusic.yplay">/yresources/yimages/btn_recognize_play_song.png</ImageSource>
+    <ImageSource x:Key="yimages.ymusic.ypause">/yresources/yimages/btn_recognize_pause_song.png</ImageSource>
+    <ImageSource x:Key="yimages.ymusic.ylike">/yresources/yimages/recognize_tingge_black_like.png</ImageSource>
+    <ImageSource x:Key="yimages.ymusic.ylike.selected">/yresources/yimages/recognize_tingge_black_like_selected.png</ImageSource>
+    <ImageSource x:Key="yimages.ymusic.ymore">/yresources/yimages/recognize_tingge_black_more.png</ImageSource>
+    
+</ResourceDictionary>

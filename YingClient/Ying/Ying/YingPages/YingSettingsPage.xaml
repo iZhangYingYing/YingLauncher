@@ -1,0 +1,38 @@
+﻿<Page x:Class="Ying.YingPages.YingSettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Ying.YingPages"
+       xmlns:ycontrols="clr-namespace:MicroTools;assembly=MicroTools"
+      xmlns:microtools="clr-namespace:MicroTools;assembly=MicroTools"
+      mc:Ignorable="d" 
+      Height="360.604" Width="640.604"
+      Title="YingSettingPage">
+
+    <Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="148.604" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="在线音乐" Foreground="#A7A7A7" Padding="25 0 0 0" VerticalContentAlignment="Center" Height="40" />
+                        <ycontrols:TabItemButtonOne Checked="YingTabSwitch" Tag="YingLaunchSettings" Content="启动设置" ImagePath="/images/launch.png" ImageSize="16.604" Foreground="White" Opacity="0.804" Height="24.604" HorizontalAlignment="Stretch" Margin="6.604, 0, 6.604, 3.604"/>
+                        <Label Content="我的音乐" Foreground="#A7A7A7" Padding="25 0 0 0" VerticalContentAlignment="Center"   Height="40" />
+                    </StackPanel>
+
+                </ScrollViewer>
+
+            </Grid>
+            <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="1,0,0,0">
+                <ScrollViewer Name="ycontent">
+                    <StackPanel Name="ycontorls">
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

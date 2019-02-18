@@ -1,0 +1,16 @@
+E:\Code Src\2016-12\HttpHelper V1.9.0.6\HttpHelper V1.9\HttpHelper\bin\Debug\HttpHelper.dll
+E:\Code Src\2016-12\HttpHelper V1.9.0.6\HttpHelper V1.9\HttpHelper\bin\Debug\HttpHelper.pdb
+E:\Code Src\2016-12\HttpHelper V1.9.0.6\HttpHelper V1.9\HttpHelper\obj\Debug\HttpHelper.dll
+E:\Code Src\2016-12\HttpHelper V1.9.0.6\HttpHelper V1.9\HttpHelper\obj\Debug\HttpHelper.pdb
+Z:\Ying\YingResolver\HttpHelper\bin\Debug\HttpHelper.dll
+Z:\Ying\YingResolver\HttpHelper\bin\Debug\HttpHelper.pdb
+Z:\Ying\YingResolver\HttpHelper\obj\Debug\HttpHelper.csprojAssemblyReference.cache
+Z:\Ying\YingResolver\HttpHelper\obj\Debug\HttpHelper.csproj.CoreCompileInputs.cache
+Z:\Ying\YingResolver\HttpHelper\obj\Debug\HttpHelper.dll
+Z:\Ying\YingResolver\HttpHelper\obj\Debug\HttpHelper.pdb
+Z:\Ying\HttpHelper\bin\Debug\HttpHelper.dll
+Z:\Ying\HttpHelper\bin\Debug\HttpHelper.pdb
+Z:\Ying\HttpHelper\obj\Debug\HttpHelper.csprojAssemblyReference.cache
+Z:\Ying\HttpHelper\obj\Debug\HttpHelper.csproj.CoreCompileInputs.cache
+Z:\Ying\HttpHelper\obj\Debug\HttpHelper.dll
+Z:\Ying\HttpHelper\obj\Debug\HttpHelper.pdb

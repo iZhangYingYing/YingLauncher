@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YingResolver", "YingResolver\YingResolver.csproj", "{E8EFEF72-2D76-4A00-A8EF-1C31BF618D98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YingTest", "YingTest\YingTest.csproj", "{AB5BB19F-1700-47E3-AEBC-179E31FA1FB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpHelper", "..\HttpHelper\HttpHelper.csproj", "{AE9CF492-DC7E-48CC-AF80-CDE9522EB71A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8EFEF72-2D76-4A00-A8EF-1C31BF618D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8EFEF72-2D76-4A00-A8EF-1C31BF618D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8EFEF72-2D76-4A00-A8EF-1C31BF618D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8EFEF72-2D76-4A00-A8EF-1C31BF618D98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB5BB19F-1700-47E3-AEBC-179E31FA1FB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB5BB19F-1700-47E3-AEBC-179E31FA1FB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB5BB19F-1700-47E3-AEBC-179E31FA1FB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB5BB19F-1700-47E3-AEBC-179E31FA1FB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE9CF492-DC7E-48CC-AF80-CDE9522EB71A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE9CF492-DC7E-48CC-AF80-CDE9522EB71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE9CF492-DC7E-48CC-AF80-CDE9522EB71A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE9CF492-DC7E-48CC-AF80-CDE9522EB71A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9AC83EF-1832-40A1-A1D2-258B295B9B82}
+	EndGlobalSection
+EndGlobal

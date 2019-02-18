@@ -1,0 +1,44 @@
+﻿<Grid x:Class="Ying.Controls.ForgeInstall"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="290" Width="630">
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="30"/>
+        <RowDefinition/>
+        <RowDefinition Height="40"/>
+        <RowDefinition Height="23"/>
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition Width="49"/>
+    </Grid.ColumnDefinitions>
+
+    <TextBlock Text="安装Forge到选择的版本" Style="{StaticResource InfoTextBlockStyle}" Grid.Row="0" VerticalAlignment="Top"/>
+    
+    <ComboBox Width="375" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="1,0" 
+              ItemsSource="{Binding Versions, Mode=OneWay}" DisplayMemberPath="Id"
+              SelectedIndex="{Binding VersionIndex, Mode=TwoWay}"
+              IsEnabled="{Binding HasAnyVersion, Mode=OneWay}"
+              SelectionChanged="GetVersionForgeListAsync"/>
+
+    <ListView x:Name="_forgeList" Style="{StaticResource GridListViewStyle}"
+              Width="580" Height="235" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0">
+        <ListView.View>
+            <GridView>
+                <GridViewColumn Header="Forge版本" Width="260" DisplayMemberBinding="{Binding Version, Mode=OneWay}"/>
+                <GridViewColumn Header="修改日期" Width="310" DisplayMemberBinding="{Binding ModifiedTime, Mode=OneWay}"/>
+            </GridView>
+        </ListView.View>
+    </ListView>
+
+    <TextBlock x:Name="_statusBox" Style="{StaticResource InfoTextBlockStyle}" Grid.Row="3" Height="20" FontSize="14"/>
+
+    <Button x:Name="_downloadButton" Style="{StaticResource GlowIconButtonStyle}" ToolTip="下载安装选中Forge版本" Click="InstallForgeAsync"
+            Width="32" Height="32" Grid.Row="2" Grid.Column="1">
+        <Button.Background>
+            <ImageBrush ImageSource="/Ying;component/images/download.png"/>
+        </Button.Background>
+    </Button>
+</Grid>

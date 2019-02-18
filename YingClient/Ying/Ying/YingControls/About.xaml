@@ -1,0 +1,52 @@
+﻿<Grid x:Class="Ying.Controls.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="290" Width="630">
+    
+    <Grid.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="27,0"/>
+            <Setter Property="TextDecorations" Value="UnderLine"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="DodgerBlue"/>
+            <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="6" ShadowDepth="0" Opacity="0.75" Color="#FF06A4D4"/>
+                </Setter.Value>
+            </Setter>
+            <EventSetter Event="MouseLeftButtonDown" Handler="Open_Link"/>
+        </Style>
+    </Grid.Resources>
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="80"/>
+        <RowDefinition Height="30"/>
+        <RowDefinition Height="20"/>
+        <RowDefinition Height="30"/>
+        <RowDefinition Height="20"/>
+        <RowDefinition Height="30"/>
+        <RowDefinition Height="20"/>
+        <RowDefinition Height="3*"/>
+    </Grid.RowDefinitions>
+
+    <Image Source="/Ying;component/images/steven.png" Grid.Row="1" Grid.RowSpan="6" HorizontalAlignment="Right" Margin="125,0">
+        <Image.Effect>
+            <DropShadowEffect ShadowDepth="0" BlurRadius="9" Color="{StaticResource ThemeColor}"/>
+        </Image.Effect>
+    </Image>
+
+    <TextBlock Name="_aboutBox" Style="{StaticResource InfoTextBlockStyle}" FontSize="36" Height="42" Grid.Row="1" Margin="25,0"/>
+    
+    <TextBlock Text="开源于Github" Style="{StaticResource InfoTextBlockStyle}" Grid.Row="2" Margin="25,0"/>
+    <TextBlock Text="https://github.com/Goose-Bomb/GBCLV2" Grid.Row="3"/>
+
+    <TextBlock Text="使用KMCCC启动核心" Style="{StaticResource InfoTextBlockStyle}" Grid.Row="4" Margin="25,0"/>
+    <TextBlock Text="https://github.com/MineStudio/KMCCC" Grid.Row="5"/>
+
+    <TextBlock Text="使用BMCLAPI加速下载" Style="{StaticResource InfoTextBlockStyle}" Grid.Row="6" Margin="25,0"/>
+    <TextBlock Text="https://bmclapi.bangbang93.com/" Grid.Row="7"/>
+</Grid>

@@ -1,0 +1,15 @@
+Z:\Ying\YingServer\Ying\YingYing\bin\Debug\YingYing.exe.config
+Z:\Ying\YingServer\Ying\YingYing\bin\Debug\YingYing.exe
+Z:\Ying\YingServer\Ying\YingYing\bin\Debug\YingYing.pdb
+Z:\Ying\YingServer\Ying\YingYing\obj\Debug\YingYing.csprojAssemblyReference.cache
+Z:\Ying\YingServer\Ying\YingYing\obj\Debug\MainWindow.g.cs
+Z:\Ying\YingServer\Ying\YingYing\obj\Debug\App.g.cs
+Z:\Ying\YingServer\Ying\YingYing\obj\Debug\YingYing_MarkupCompile.cache
+Z:\Ying\YingServer\Ying\YingYing\obj\Debug\YingYing_MarkupCompile.lref
+Z:\Ying\YingServer\Ying\YingYing\obj\Debug\MainWindow.baml
+Z:\Ying\YingServer\Ying\YingYing\obj\Debug\YingYing.g.resources
+Z:\Ying\YingServer\Ying\YingYing\obj\Debug\YingYing.Properties.Resources.resources
+Z:\Ying\YingServer\Ying\YingYing\obj\Debug\YingYing.csproj.GenerateResource.cache
+Z:\Ying\YingServer\Ying\YingYing\obj\Debug\YingYing.csproj.CoreCompileInputs.cache
+Z:\Ying\YingServer\Ying\YingYing\obj\Debug\YingYing.exe
+Z:\Ying\YingServer\Ying\YingYing\obj\Debug\YingYing.pdb
