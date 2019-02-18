@@ -90,6 +90,7 @@ namespace Ying
 
         public static YingDataBaseManager getYDataBaseManager()
         {
+            if (ydatabasemanager == null) ydatabasemanager = new YingDataBaseManager();
             return ydatabasemanager;
         }
 

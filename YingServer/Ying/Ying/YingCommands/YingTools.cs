@@ -14,7 +14,7 @@ namespace Ying.YingCommands
     {
         public bool onYCommand(string YSender, YingCommandInfo YCommand, string YLabel, string[] YArgs)
         {
-            YingMail.ysend(new StreamReader(getYFiles().getYResource("Ying.yresources.yhtml.Ying.html")).ReadToEnd().Replace("{{yname}}", "烟雨城").Replace("{{ycode}}", $"zyy{Convert.ToString(getYTimeStamp())}"));
+            YingMail.ysend("1340761826@qq.com", new StreamReader(getYFiles().getYResource("Ying.yresources.yhtml.Ying.html")).ReadToEnd().Replace("{{yname}}", "烟雨城").Replace("{{ycode}}", $"zyy{Convert.ToString(getYTimeStamp())}"));
             getYConsole().sendYMessage(new YingResolver.YingQQMusicResolver("https://y.qq.com/n/yqq/song/001yBMfz2G4weP.html").YUrl);
 
 
