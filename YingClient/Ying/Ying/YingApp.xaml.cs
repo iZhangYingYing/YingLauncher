@@ -32,6 +32,7 @@ namespace Ying
                 this.Shutdown(0);
             }
 
+
             if(!File.Exists("bass.dll"))
             {
                 YingTools.YExtractResFile("Ying.yresources.yplugins.bass.dll", "bass.dll");
@@ -44,7 +45,7 @@ namespace Ying
             InitializeLauncherCore();
             InitializeThemeColor();
 
-            //Dispatcher.UnhandledException += UnhandledExceptionHandler;
+            Dispatcher.UnhandledException += UnhandledExceptionHandler;
 
             base.OnStartup(e);
         }

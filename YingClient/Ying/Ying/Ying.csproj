@@ -105,7 +105,7 @@
     </Compile>
     <Compile Include="YingEvents\iYingEvent.cs" />
     <Compile Include="YingEvents\YingLoginEvent.cs" />
-    <Compile Include="YingEvents\YingMessageEvent.cs" />
+    <Compile Include="YingEvents\YingPackageEvent.cs" />
     <Compile Include="YingEvents\YingSettingsEvent.cs" />
     <Compile Include="YingPages\YingLoadingPage.xaml.cs">
       <DependentUpon>YingLoadingPage.xaml</DependentUpon>
@@ -355,9 +355,9 @@
     <Resource Include="images\other.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\MicroTools\MicroTools.csproj">
-      <Project>{11A726EC-56F6-44F4-89BD-0847434A8EDB}</Project>
-      <Name>MicroTools</Name>
+    <ProjectReference Include="..\..\..\HttpHelper\HttpHelper.csproj">
+      <Project>{AE9CF492-DC7E-48CC-AF80-CDE9522EB71A}</Project>
+      <Name>HttpHelper</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\websocket-sharp\websocket-sharp.csproj">
       <Project>{b357bac7-529e-4d81-a0d2-71041b19c8de}</Project>
@@ -379,6 +379,7 @@
     <Resource Include="yresources\yimages\recognize_tingge_black_more.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="yresources\yimages\yybackground.jpg" />
     <Content Include="yresources\yimages\yicons\ytips.gif" />
     <Resource Include="yresources\yimages\yicons\yok.gif" />
     <Resource Include="yresources\yimages\yicons\yno.gif" />
@@ -401,9 +402,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="yresources\yplugins\bass.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="yresources\yimages\yybackground.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="yresources\yimages\ybackground.bmp" />

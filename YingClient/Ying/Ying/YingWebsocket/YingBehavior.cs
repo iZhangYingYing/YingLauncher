@@ -15,8 +15,7 @@ namespace Ying.YingWebsocket
         private static DispatcherTimer ytimer = new DispatcherTimer
         {
             Interval = new TimeSpan(0, 0, 64),
-            IsEnabled = true,
-            Tag = "Ying Reconnect"
+            Tag = "Ying Reconnect",
         };
 
         private static WebSocket yclient = new WebSocket("ws://iying.top:6040/Ying");
@@ -84,26 +83,26 @@ namespace Ying.YingWebsocket
                             isYSuccess = ylogin.yaccessToken != null,
                             ymessage = ylogin.ymessage
                         });
-                        getYEvent().Publish<YingMessageEvent>(new YingMessageEvent
+                        getYEvent().Publish<YingPackageEvent>(new YingPackageEvent
                         {
                             isYSend = false,
-                            ystruct = ymessage
+                            yStruct = ymessage
                         });
 
                         break;
                     case YingStruct.YingType.YCode:
-                        getYEvent().Publish<YingMessageEvent>(new YingMessageEvent
+                        getYEvent().Publish<YingPackageEvent>(new YingPackageEvent
                         {
                             isYSend = false,
-                            ystruct = ymessage
+                            yStruct = ymessage
                         });
 
                         break;
                     case YingStruct.YingType.YRegister:
-                        getYEvent().Publish<YingMessageEvent>(new YingMessageEvent
+                        getYEvent().Publish<YingPackageEvent>(new YingPackageEvent
                         {
                             isYSend = false,
-                            ystruct = ymessage
+                            yStruct = ymessage
                         });
 
                         break;
@@ -121,8 +120,6 @@ namespace Ying.YingWebsocket
 
             };
 
-
-
             yclient.OnClose += (sender, yevent) =>
             {
                 Console.WriteLine("YingClose");
@@ -133,13 +130,11 @@ namespace Ying.YingWebsocket
                 Console.WriteLine("YingError");
             };
 
-            yclient.ConnectAsync();
-
-            getYEvent().Subscribe<YingMessageEvent>((yevent) => {
+            getYEvent().Subscribe<YingPackageEvent>((yevent) => {
                 if (!yevent.isYSend) return;
                 if(yclient.IsAlive)
                 {
-                    yclient.SendAsync(JsonConvert.SerializeObject(yevent.ystruct), this.ycompleted);
+                    yclient.SendAsync(JsonConvert.SerializeObject(yevent.yStruct), this.ycompleted);
                 }
             });
 
@@ -155,8 +150,21 @@ namespace Ying.YingWebsocket
                 }
 
             };
-            ytimer.Start();
 
+        }
+
+        public Boolean YConnect()
+        {
+            yclient.ConnectAsync();
+            ytimer.Start();
+            return true;
+        }
+
+        public Boolean YClose()
+        {
+            yclient.CloseAsync();
+            ytimer.Stop();
+            return true;
         }
     }
 }

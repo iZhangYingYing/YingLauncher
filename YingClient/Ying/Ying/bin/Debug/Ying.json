@@ -2,7 +2,7 @@
     "JavaPath": "C:\\Program Files\\Java\\jre1.8.0_111\\bin\\javaw.exe",
     "VersionIndex": -1,
     "IsVersionSplit": false,
-    "MaxMemory": 1024,
+    "MaxMemory": 804,
     "GameWinWidth": 854,
     "GameWinHeight": 480,
     "IsFullScreen": false,
@@ -17,17 +17,15 @@
     "DownloadSource": 1,
     "AfterLaunchBehavior": 0,
     "YAccount": {
-        "yemail": "1340761826@qq.com",
-        "ypassword": null,
-        "yclientToken": "f072cfe73a504414917d860d11fbad15",
-        "yaccessToken": "96ab6d8fdd024e98837bee01bf7b7626",
-        "ymessage": "Ying Ok",
+        "yclientToken": null,
+        "yaccessToken": null,
+        "ymessage": null,
         "yuser": {
-            "yid": 1,
-            "yusername": "颖",
-            "ypassword": null,
+            "yid": 0,
+            "yusername": "Ying",
+            "ypassword": "zyy20020604",
             "ysalt": null,
-            "yopenid": "eee4352b908b45408b85bf28d9c50647",
+            "yopenid": null,
             "ysex": 1,
             "yemail": "1340761826@qq.com",
             "yavatar": null,
@@ -38,7 +36,8 @@
             "yqq": null,
             "ylevel": 0,
             "yip": null,
-            "yregip": null
+            "yregip": null,
+            "yprofiles": null
         }
     },
     "YAuthServers": null

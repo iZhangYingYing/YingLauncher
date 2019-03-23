@@ -113,7 +113,7 @@ namespace Ying.Controls
             };
 
             var downloadPage = new Pages.DownloadPage();
-            (Application.Current.MainWindow as YingWindow).Frame.Navigate(downloadPage);
+            (Application.Current.MainWindow as YingWindow).YFrame.Navigate(downloadPage);
             bool hasDownloadSucceeded = await downloadPage.StartDownloadAsync(forgeDownload, "下载Forge");
 
             if (!hasDownloadSucceeded)

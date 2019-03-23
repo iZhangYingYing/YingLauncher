@@ -14,5 +14,7 @@ namespace Ying.YingDataBase.YingDataStructs
 
         public String yyid { get; set; }
         public String yname { get; set; }
+
+        public String ytextureid { get; set; }
     }
 }

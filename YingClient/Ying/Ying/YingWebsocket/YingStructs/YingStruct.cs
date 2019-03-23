@@ -2,7 +2,7 @@
 
 namespace Ying.YingWebsocket.YingStructs
 {
-    class YingStruct
+    public class YingStruct
     {
 
         public enum YingType

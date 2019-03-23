@@ -18,7 +18,7 @@ namespace Ying.Controls
         private void LaunchSettings_Loaded(object sender, RoutedEventArgs e)
         {
             this.DataContext = YingConfig.YArgs;
-            _passWordBox.Password = YingConfig.YArgs.YAccount.ypassword;
+            //_passWordBox.Password = YingConfig.YArgs.YAccount..ypassword;
         }
 
         private void ShowVersionOptions(object sender, RoutedEventArgs e)

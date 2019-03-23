@@ -11,10 +11,9 @@ namespace Ying.YingDataBase.YingDataStructs
     {
         [PrimaryKey, AutoIncrement]
         public int yid { get; set; }
+        public String ytextureid { get; set; }
 
-        public TimeSpan ytimestamp { get; set; }
-        public String yprofileId { get; set; }
-        public String yprofileName { get; set; }
+        public Double ytimestamp { get; set; }
         public String yskin { get; set; }
         /// <summary>
         /// default 或 slim ，其中 default 代表 STEVE，slim 代表 ALEX。

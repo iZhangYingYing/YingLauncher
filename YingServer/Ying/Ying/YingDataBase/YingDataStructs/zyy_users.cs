@@ -47,5 +47,7 @@ namespace Ying.YingDataBase.YingDataStructs
         public String yip { get; set; }
         public String yregip { get; set; }
 
+        public String yprofiles { get; set; }
+
     }
 }

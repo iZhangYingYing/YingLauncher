@@ -13,3 +13,4 @@ Z:\Ying\HttpHelper\bin\Debug\HttpHelper.pdb
 Z:\Ying\HttpHelper\obj\Debug\HttpHelper.csproj.CoreCompileInputs.cache
 Z:\Ying\HttpHelper\obj\Debug\HttpHelper.dll
 Z:\Ying\HttpHelper\obj\Debug\HttpHelper.pdb
+Z:\Ying\HttpHelper\obj\Debug\HttpHelper.csprojAssemblyReference.cache

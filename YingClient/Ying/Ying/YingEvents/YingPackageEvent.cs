@@ -9,11 +9,11 @@ using static Ying.YingYing;
 
 namespace Ying.YingEvents
 {
-    class YingMessageEvent : EventBase, iYingEvent
+    public class YingPackageEvent : EventBase, iYingEvent
     {
 
         public Boolean isYSend { get; set; }
-        public YingStruct ystruct { get; set; }
+        public YingStruct yStruct { get; set; }
         
 
         public Boolean isYCanceled()

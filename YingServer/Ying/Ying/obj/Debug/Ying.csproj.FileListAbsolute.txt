@@ -54,3 +54,4 @@ Z:\Ying\YingServer\Ying\Ying\obj\Debug\Ying.csproj.CoreCompileInputs.cache
 Z:\Ying\YingServer\Ying\Ying\obj\Debug\Ying.csproj.CopyComplete
 Z:\Ying\YingServer\Ying\Ying\obj\Debug\Ying.exe
 Z:\Ying\YingServer\Ying\Ying\obj\Debug\Ying.pdb
+Z:\Ying\YingServer\Ying\Ying\bin\Debug\BouncyCastle.Crypto.dll

@@ -40,6 +40,9 @@
     <ApplicationIcon>Ying.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.Crypto.dll.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
     </Reference>
@@ -147,12 +150,16 @@
     <Compile Include="YingExceptions\YingAuthenticationException.cs" />
     <Compile Include="YingPlugin\iYingPlugin.cs" />
     <Compile Include="YingPlugin\YingPluginManager.cs" />
+    <Compile Include="YingUtils\YingCode.cs" />
     <Compile Include="YingUtils\YingEncodingType.cs" />
     <Compile Include="YingUtils\YingFile.cs" />
     <Compile Include="YingUtils\YingFileHandle.cs" />
+    <Compile Include="YingUtils\YingJsonFormat.cs" />
     <Compile Include="YingUtils\YingMail.cs" />
     <Compile Include="YingUtils\YingMimeMapping.cs" />
+    <Compile Include="YingUtils\YingRSA.cs" />
     <Compile Include="YingUtils\YingSHA1.cs" />
+    <Compile Include="YingUtils\YingUUID.cs" />
     <Compile Include="YingWebsocket\YingStructs\YingCodeStruct.cs" />
     <Compile Include="YingWebsocket\YingStructs\YingRegisterStruct.cs" />
     <Compile Include="YingWindows\YingMessageBox.xaml.cs">

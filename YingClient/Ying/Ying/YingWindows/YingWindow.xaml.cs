@@ -5,22 +5,18 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using Ying.Pages;
 using Ying.Helpers;
 using System.Windows.Controls;
-using Ying.YingPages;
-using Ying.Modules;
 using static Ying.YingYing;
-using Ying.YingUtil;
-using Ying.YingWindows;
-using Ying.YingWinFormControls;
-using Ying.YingWebsocket;
+using Ying.YingPages;
+using Ying.Pages;
+using Ying.Modules;
 
 namespace Ying
 {
     public partial class YingWindow : Window
     {
-        public Frame Frame { get => yframe; }
+        public Frame YFrame { get => yframe; }
 
         public YingWindow()
         {
@@ -34,10 +30,11 @@ namespace Ying
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            yframe.Navigate(new YingLoadingPage());
+
             Action ynavigate = () => {
                 this.Dispatcher.Invoke(() =>
                 {
-                    //!=
                     if (YingConfig.YArgs.YAccount.yaccessToken == null)
                     {
                         yframe.Navigate(new YingLoginPage());
@@ -49,7 +46,7 @@ namespace Ying
                 });
             };
 
-            if ("Ying" != "Ying")
+            if ("Ying" == "Ying")
                 yframe.Navigate(new YingMediaPage(new FileInfo($"{getYFiles().getYResources().ymedia}\\LON - 我的一个道姑朋友.mp4").FullName, ynavigate));
             else
                 ynavigate.Invoke();
@@ -110,6 +107,8 @@ namespace Ying
         private void Ying()
         {
             Application.Current.MainWindow = this;
+
+            getYBehaviors().ybehavior.YConnect();
 
             getYMusic().Show();
 

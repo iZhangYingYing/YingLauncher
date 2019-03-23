@@ -40,16 +40,6 @@ namespace Ying
 
         public YingAuhenticator()
         {
-            /*this.YEmail = yemail;
-            this.YPassword = ypassword;
-            this.YAccessToken = yaccessToken;
-            this.YClientToken = yclientToken;
-
-            
-                
-
-            */
-
         }
 
         public AuthenticationInfo Do()

@@ -12,9 +12,9 @@ DEBUG;TRACE
 Z:\Ying\YingClient\Ying\Ying\YingApp.xaml
 22661313457
 1137376943
-93-1921221001
-321729177529
+93866071625
+322110552006
 YingControls\YingItems\YingConsoleMessageItem.xaml;YingControls\YingLyricView.xaml;YingPages\YingLoadingPage.xaml;YingPages\YingLoginPage.xaml;YingPages\YingMediaPage.xaml;YingPages\YingSettingsPage.xaml;YingWindows\YingConsole.xaml;YingWindows\YingMessageBox.xaml;YingWindows\YingMusicWindow.xaml;YingWindows\YingWindow.xaml;YingControls\About.xaml;YingControls\ForgeInstall.xaml;YingControls\YingGameDownload.xaml;YingControls\OtherSettings.xaml;YingPages\DownloadPage.xaml;YingControls\YingLaunchSettings.xaml;YingPages\YingMainPage.xaml;YingPages\ModPage.xaml;YingPages\ResourcepackPage.xaml;YingPages\SettingsPage.xaml;YingPages\SkinPage.xaml;yresources\YingResources.xaml;
 
-False
+True
 

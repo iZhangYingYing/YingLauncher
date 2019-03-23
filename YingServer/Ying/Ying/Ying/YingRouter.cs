@@ -48,8 +48,9 @@ namespace Ying
 
         private struct YingRouteInfo
         {
-            public String YUri;
-            public Func<HttpListenerRequest, YingResponse> YAction;
+            public String YUri { get; set; }
+            public Func<HttpListenerRequest, YingResponse> YAction { get; set; }
+            public Boolean isYMatch { get; set; }
         }
 
         
@@ -91,22 +92,24 @@ namespace Ying
             return this;
         }
 
-        public YingRouter yget(String yuri, Func<HttpListenerRequest, YingResponse> yaction)
+        public YingRouter yget(String yuri, Func<HttpListenerRequest, YingResponse> yaction, Boolean isYMatch = false)
         {
             yroutes[YingRouteType.YGet].Add(new YingRouteInfo
             {
                 YUri = yuri,
-                YAction = yaction
+                YAction = yaction,
+                isYMatch = isYMatch
             });
             return this;
         }
 
-        public YingRouter ypost(String yuri, Func<HttpListenerRequest, YingResponse> yaction)
+        public YingRouter ypost(String yuri, Func<HttpListenerRequest, YingResponse> yaction, Boolean isYMatch = false)
         {
             yroutes[YingRouteType.YPost].Add(new YingRouteInfo
             {
                 YUri = yuri,
-                YAction = yaction
+                YAction = yaction,
+                isYMatch = isYMatch
             });
             return this;
         }
@@ -175,9 +178,11 @@ namespace Ying
             HttpListenerResponse yresponse = yargs.Response;
 
             yroutes[ytype].ForEach((y) =>
-            {
-                if (yargs.Request.RawUrl == y.YUri)
+            { 
+                if (y.isYMatch || yargs.Request.RawUrl == y.YUri)
                 {
+                    int ycount = Regex.Matches(yargs.Request.RawUrl, y.YUri).Count;
+                    if (y.isYMatch && Regex.Matches(yargs.Request.RawUrl, y.YUri).Count == 0) return;
                     try
                     {
                         
@@ -204,7 +209,7 @@ namespace Ying
                         {
                             error = yexception.getYError(),
                             errorMessage = yexception.Message,
-                            cause = yexception.InnerException.Message
+                            cause = null
                         })));
                     }
                     catch (YingHttpException yexception)
@@ -217,6 +222,7 @@ namespace Ying
                     }
                     return;
                 }
+                
             });
 
 
@@ -244,6 +250,11 @@ namespace Ying
             yresponse.ContentEncoding = YContentEncoding;
 
             yresponse.Headers.Set(HttpResponseHeader.Server, "Ying Server 6.0.4.0");
+        }
+
+        public static String YQuery(String yurl, String ykey)
+        {
+            return new Regex($@"(?:^|\?|&){ykey}=(\d*)(?:&|$)").Match(yurl).Groups[0].Value;
         }
 
     }

@@ -30,6 +30,8 @@ namespace Ying
                 this.yconnection.Insert(new zyy_settings { ykey = "ydescription", yvalue = "一个Minecraft服务器", ydescription = "服务器简介" });
                 this.yconnection.Insert(new zyy_settings { ykey = "yip", yvalue = "0.0.0.0", ydescription = "服务器ip" });
                 this.yconnection.Insert(new zyy_settings { ykey = "yport", yvalue = "6040", ydescription = "服务器端口 (默认 6040)" });
+
+                this.yconnection.Insert(new zyy_yggdrasil_texture { ytextureid = "zyy2a2a1399140968341fdedc4aa8b94", yskin = "http://zyy.com:6040/yingyggdrasil/ytextures/zyy2a2a1399140968341fdedc4aa8b94", yskinmetadata = "default", ytimestamp = getYTimeStamp().TotalMilliseconds });
           }
         }
 

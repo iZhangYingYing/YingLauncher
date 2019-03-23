@@ -13,6 +13,11 @@ using Ying.YingWebsocket;
 
 namespace Ying
 {
+    public struct YingBehaviors
+    {
+        public YingBehavior ybehavior { get; set; }
+    }
+
     public class YingYing
     {
         private static YingMagneticManager ymagnetic = new YingMagneticManager(YingApp.Current.MainWindow);
@@ -24,7 +29,7 @@ namespace Ying
         private static EventBus yevent = new EventBus();
         private static YingAuhenticator yauhenticator = new YingAuhenticator();
 
-        private static YingBehavior ybehavior = new YingBehavior();
+        private static YingBehaviors ybehaviors = new YingBehaviors();
 
 
 
@@ -69,6 +74,14 @@ namespace Ying
         {
             return yauhenticator;
         }
+
+        public static YingBehaviors getYBehaviors()
+        {
+            if (ybehaviors.ybehavior == null) ybehaviors.ybehavior = new YingBehavior();
+            return ybehaviors;
+        }
+
+
 
 
     }

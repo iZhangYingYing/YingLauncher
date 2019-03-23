@@ -60,14 +60,14 @@ namespace Ying.YingPages
             //};
             YingConfig.YArgs.YAuthServers.Add(new YingAuthServer { });*/
 
-            getYEvent().Subscribe<YingMessageEvent>((yevent) =>
+            getYEvent().Subscribe<YingPackageEvent>((yevent) =>
             {
                 if (!yevent.isYSend)
                 {
-                    switch (yevent.ystruct.ytype)
+                    switch (yevent.yStruct.ytype)
                     {
                         case YingStruct.YingType.YLogin:
-                            getYAuhenticator().YResult = JsonConvert.DeserializeObject<YingLoginStruct>(yevent.ystruct.ydata.ymessage);
+                            getYAuhenticator().YResult = JsonConvert.DeserializeObject<YingLoginStruct>(yevent.yStruct.ydata.ymessage);
 
                             this.Dispatcher.Invoke(() =>
                             {
@@ -96,7 +96,7 @@ namespace Ying.YingPages
                             break;
                         case YingStruct.YingType.YCode:
                             //if (this.ywait.Status == TaskStatus.Running) this.ywait.Dispose();
-                            YingCodeStruct ycode = JsonConvert.DeserializeObject<YingCodeStruct>(yevent.ystruct.ydata.ymessage);
+                            YingCodeStruct ycode = JsonConvert.DeserializeObject<YingCodeStruct>(yevent.yStruct.ydata.ymessage);
 
                             this.Dispatcher.Invoke(() =>
                             {
@@ -121,7 +121,7 @@ namespace Ying.YingPages
                             break;
                         case YingStruct.YingType.YRegister:
                             //if (this.ywait.Status == TaskStatus.Running) this.ywait.Dispose();
-                            YingRegisterStruct yregister = JsonConvert.DeserializeObject<YingRegisterStruct>(yevent.ystruct.ydata.ymessage);
+                            YingRegisterStruct yregister = JsonConvert.DeserializeObject<YingRegisterStruct>(yevent.yStruct.ydata.ymessage);
 
                             this.Dispatcher.Invoke(() =>
                             {
@@ -134,7 +134,7 @@ namespace Ying.YingPages
                                 }
                                 else
                                 {
-                                    YingConfig.YArgs.YAccount = new YingLoginStruct { yuser = yregister.yuser };
+                                    YingConfig.YArgs.YAccount = new YingLoginStruct { yaccessToken = yregister.yaccessToken, yclientToken = yregister.yclientToken, yuser = yregister.yuser };
                                     YingMessageBox.Ying($"Ying: {yregister.ymessage}", YingMessageBox.YingMessageType.yface_smile, 6040);
                                     (YingApp.Current.MainWindow as YingWindow).yframe.Navigate(new YingMainPage());
                                 }
@@ -227,10 +227,10 @@ namespace Ying.YingPages
             YLoginButton.Content = "";
             YLoading.Visibility = Visibility.Visible;
 
-            getYEvent().Publish<YingMessageEvent>(new YingMessageEvent
+            getYEvent().Publish<YingPackageEvent>(new YingPackageEvent
             {
                 isYSend = true,
-                ystruct = new YingStruct()
+                yStruct = new YingStruct()
                 {
                     Ying = "颖",
                     ytype = YingStruct.YingType.YLogin,
@@ -242,8 +242,7 @@ namespace Ying.YingPages
                         {
                             yaccessToken = null,
                             yclientToken = yclientToken.ToString("N"),
-                            yemail = YEamil.Text,
-                            ypassword = YPassword.Password
+                            yuser = new zyy_users { yemail = YEamil.Text, ypassword = YPassword.Password }
                         }),
                         ydata = null
                     }
@@ -305,10 +304,10 @@ namespace Ying.YingPages
             switch (this.ystep)
             {
                 case 0:
-                    getYEvent().Publish<YingMessageEvent>(new YingMessageEvent
+                    getYEvent().Publish<YingPackageEvent>(new YingPackageEvent
                     {
                         isYSend = true,
-                        ystruct = new YingStruct
+                        yStruct = new YingStruct
                         {
                             Ying = "颖",
                             ytype = YingStruct.YingType.YCode,
@@ -337,10 +336,10 @@ namespace Ying.YingPages
                         this.YRegister(null, null);
                         return;
                     }
-                    getYEvent().Publish<YingMessageEvent>(new YingMessageEvent
+                    getYEvent().Publish<YingPackageEvent>(new YingPackageEvent
                     {
                         isYSend = true,
-                        ystruct = new YingStruct
+                        yStruct = new YingStruct
                         {
                             Ying = "颖",
                             ytype = YingStruct.YingType.YCode,
@@ -378,10 +377,10 @@ namespace Ying.YingPages
                     //if(!this.YBoy.IsChecked && !this.YGirl.IsChecked) this.YBoy.clic
                     YingSex ysex = YingSex.YBoy;
                     if (this.YGirl.IsChecked == true) ysex = YingSex.YGirl;
-                    getYEvent().Publish<YingMessageEvent>(new YingMessageEvent
+                    getYEvent().Publish<YingPackageEvent>(new YingPackageEvent
                     {
                         isYSend = true,
-                        ystruct = new YingStruct
+                        yStruct = new YingStruct
                         {
                             Ying = "颖",
                             ytype = YingStruct.YingType.YRegister,

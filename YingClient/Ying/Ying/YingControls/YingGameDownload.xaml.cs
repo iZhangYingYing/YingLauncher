@@ -129,7 +129,7 @@ namespace Ying.Controls
             var filesToDownload = DownloadHelper.GetLostEssentials(version);
 
             var downloadPage = new Pages.DownloadPage();
-            (Application.Current.MainWindow as YingWindow).Frame.Navigate(downloadPage);
+            (Application.Current.MainWindow as YingWindow).YFrame.Navigate(downloadPage);
             bool hasDownloadSucceeded = await downloadPage.StartDownloadAsync(filesToDownload, "下载新的Minecraft版本");
 
             if (hasDownloadSucceeded)

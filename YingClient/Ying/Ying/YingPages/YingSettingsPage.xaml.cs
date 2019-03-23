@@ -1,24 +1,10 @@
-﻿using MicroTools;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Ying.Controls;
 using Ying.Modules;
-using Ying.YingControls;
 using Ying.YingEvents;
-using static Ying.YingYing;
 
 namespace Ying.YingPages
 {
@@ -120,7 +106,7 @@ namespace Ying.YingPages
 
         private void YingTabSwitch(object ysender, RoutedEventArgs yevent)
         {
-            IEnumerator yenumerator = this.ycontorls.Children.GetEnumerator();
+            /*IEnumerator yenumerator = this.ycontorls.Children.GetEnumerator();
             while (yenumerator.MoveNext()) { 
                 if ((ysender as TabItemButtonOne).Tag.ToString() == ((Grid)yenumerator.Current).Tag.ToString())
                 {
@@ -129,7 +115,7 @@ namespace Ying.YingPages
 
                     this.ycontent.ScrollToVerticalOffset(yposition);
                 }
-            }          
+            } */         
         }
     }
 }

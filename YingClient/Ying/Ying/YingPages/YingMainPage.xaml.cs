@@ -2,17 +2,15 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using KMCCC.Authentication;
 using KMCCC.Launcher;
 using KMCCC.Tools;
 using Ying.Modules;
 using Ying.Helpers;
-using System.Threading.Tasks;
-using Ying;
-using System.Threading;
 using System.Windows.Input;
-using System.Diagnostics;
 using Ying.YingWebsocket.YingStructs;
+using KMCCC.Authentication;
+using static Ying.YingYing;
+using System.IO;
 
 namespace Ying.Pages
 {
@@ -102,9 +100,11 @@ namespace Ying.Pages
             var Result = YingApp.YCore.Launch(new LaunchOptions
             {
                 Version = YingConfig.YArgs.SelectedVersion,
+                Mode = new MCLauncherMode(),
+                AgentPath = $"{Path.Combine(getYFiles().getYDataFolder().FullName, "authlib-injector.y.jar")}=http://zyy.com:6040/yingyggdrasil/",
                 //VersionSplit = YingConfig.YArgs.IsVersionSplit,
 
-                Authenticator = new YingAuhenticator(),
+                Authenticator = getYAuhenticator()/*new YingAuhenticator()*/,
                 MaxMemory = (int)YingConfig.YArgs.MaxMemory,
 
                 Size = new WindowSize
@@ -118,6 +118,9 @@ namespace Ying.Pages
                 VersionType = $"Ying-v{YingConfig.LauncherVersion}",
 
             }, x => x.AdvencedArguments.Add(YingConfig.YArgs.AdvancedArgs));
+
+            MessageBox.Show(Result.Handle.Arguments.ToArguments());
+
 
             if (Result.Success)
             {

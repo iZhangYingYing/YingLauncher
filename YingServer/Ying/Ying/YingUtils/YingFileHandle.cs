@@ -92,15 +92,20 @@ namespace Ying.YingUtils
         {
             try
             {
-                Assembly asm = Assembly.GetExecutingAssembly();//读取嵌入式资源
-                return asm.GetManifestResourceStream(yresFileName);
+                Assembly yasm = Assembly.GetExecutingAssembly();//读取嵌入式资源
+                return yasm.GetManifestResourceStream(yresFileName);
             }
             catch (Exception yexception)
             {
                 return null;
             }
+        }
 
-
+        public DirectoryInfo getYTextures()
+        {
+            DirectoryInfo ytextures = new DirectoryInfo(Path.Combine(getYResources().yimages.FullName, "ytextures"));
+            if (!ytextures.Exists) ytextures.Create();
+            return ytextures;    
         }
     }
 

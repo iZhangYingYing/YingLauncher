@@ -3,6 +3,8 @@ using Redbus.Events;
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Threading;
 using WebSocketSharp;
 using WebSocketSharp.Server;
@@ -140,7 +142,7 @@ namespace Ying.YingWebsocket.YingBehaviors
                 case YingStruct.YingType.YLogin:
 
                     YingLoginStruct ylogin = JsonConvert.DeserializeObject<YingLoginStruct>(ymessage.ydata.ymessage);
-                    YingAuthenticateResult yresult = YingAuthenticate.yauthenticate(ylogin.yemail, ylogin.ypassword);
+                    YingAuthenticateResult yresult = YingAuthenticate.yauthenticate(ylogin.yuser.yemail, ylogin.yuser.ypassword);
                     YingLoginStruct yylogin = new YingLoginStruct();
                     if (ylogin.yclientToken == null) ylogin.yclientToken = Guid.NewGuid().ToString("N");
 
@@ -149,7 +151,7 @@ namespace Ying.YingWebsocket.YingBehaviors
                         String yaccessToken = Guid.NewGuid().ToString("N");
                         getYDataBaseManager().getYConnection().Insert(new zyy_yggdrasil_tokens
                         {
-                            yemail = ylogin.yemail,
+                            yemail = ylogin.yuser.yemail,
 
                             yclientToken = ylogin.yclientToken,
                             yaccessToken = yaccessToken,
@@ -163,7 +165,6 @@ namespace Ying.YingWebsocket.YingBehaviors
 
                         yylogin = new YingLoginStruct
                         {
-                            yemail = ylogin.yemail,
                             yclientToken = ylogin.yclientToken,
                             yaccessToken = yaccessToken,
                             ymessage = "Ying Ok",
@@ -174,7 +175,6 @@ namespace Ying.YingWebsocket.YingBehaviors
                     {
                         yylogin = new YingLoginStruct
                         {
-                            yemail = ylogin.yemail,
                             yclientToken = ylogin.yclientToken,
                             yaccessToken = null,
                             ymessage = "Ying Error"
@@ -199,7 +199,7 @@ namespace Ying.YingWebsocket.YingBehaviors
                     YingCodeStruct ycode = JsonConvert.DeserializeObject<YingCodeStruct>(ymessage.ydata.ymessage);
                     if (ycode.ycode == 20020604)
                     {
-                        if (YingAuthenticate.yauthenticate(ycode.yemail, null).yuser.yid == 0)
+                        if (YingAuthenticate.yauthenticate(ycode.yemail, String.Empty).yuser.yid == 0)
                         {
                             int yycode = new Random().Next(100000, 1000000);
                             try
@@ -280,22 +280,37 @@ namespace Ying.YingWebsocket.YingBehaviors
                     break;
                 case YingStruct.YingType.YRegister:
                     YingRegisterStruct yregister = JsonConvert.DeserializeObject<YingRegisterStruct>(ymessage.ydata.ymessage);
-                    if((from y in getYDataBaseManager().getYConnection().Table<zyy_verification_code>()
+                    if ((from y in getYDataBaseManager().getYConnection().Table<zyy_verification_code>()
                                                     where y.yemail == yregister.yuser.yemail
                                                     select y).FirstOrDefault().ycode == yregister.ycode)
                     {
-                        Guid yguid = Guid.NewGuid();
+                        String ypassword = BitConverter.ToString(new MD5CryptoServiceProvider().ComputeHash(Encoding.UTF8.GetBytes(yregister.yuser.ypassword))).Replace("-", "").ToLower();
+                        String ysalt = new YingCode(6).YCode;
                         getYDataBaseManager().getYConnection().Insert(new zyy_users {
                             yusername = yregister.yuser.yusername,
-                            ypassword = yregister.yuser.ypassword,
-                            yopenid = yguid.ToString("N"),
+                            ypassword = BitConverter.ToString(new MD5CryptoServiceProvider().ComputeHash(Encoding.UTF8.GetBytes(ypassword + ysalt))).Replace("-", "").ToLower(),
+                            ysalt = ysalt,
+                            yopenid = Guid.NewGuid().ToString("N"),
                             ysex = yregister.yuser.ysex,
-                            yemail = yregister.yuser.yemail
+                            yemail = yregister.yuser.yemail,
+                            yprofiles = JsonConvert.SerializeObject(new String[] { new YingUUID(yregister.yuser.yusername).YUUID.ToString("N") })
                         });
                         getYDataBaseManager().getYConnection().Insert(new zyy_yggdrasil_profile
                         {
-                            yyid = yguid.ToString("N"),
-                            yname = yregister.yuser.yusername
+                            yyid = new YingUUID(yregister.yuser.yusername).YUUID.ToString("N"),
+                            yname = yregister.yuser.yusername,
+                            ytextureid = "zyy2a2a1399140968341fdedc4aa8b94"
+                        });
+                        if (yregister.yclientToken == null) yregister.yclientToken = Guid.NewGuid().ToString("N");
+                        String yaccessToken = Guid.NewGuid().ToString("N");
+                        getYDataBaseManager().getYConnection().Insert(new zyy_yggdrasil_tokens
+                        {
+                            yemail = yregister.yuser.yemail,
+
+                            yclientToken = yregister.yclientToken,
+                            yaccessToken = yaccessToken,
+
+                            ytime = getYTimeStamp().TotalMilliseconds
                         });
                         yregister.isYSuccess = true;
                         yregister.ymessage = "注册成功";

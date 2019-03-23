@@ -42,12 +42,12 @@ namespace Ying.YingWebsocket.YingStructs
         public String yip { get; set; }
         public String yregip { get; set; }
 
+        public String yprofiles { get; set; }
+
     }
 
     public struct YingLoginStruct
     {
-        public String yemail { get; set; }
-        public String ypassword { get; set; }
         public String yclientToken { get; set; }
         public String yaccessToken { get; set; }
         public String ymessage { get; set; }

@@ -7,6 +7,8 @@ using WebSocketSharp.Server;
 using Ying.YingWebsocket.YingBehaviors;
 using static Ying.YingRouter;
 using Newtonsoft.Json;
+using Ying.YingUtils;
+using Ying.YingUtil;
 
 namespace Ying.YingWebsocket
 {
@@ -47,8 +49,6 @@ namespace Ying.YingWebsocket
 
         public void Ying()
         {
-            getYSettings();
-
             yserver.AddWebSocketService<YingBehavior>("/Ying");
             yserver.AddWebSocketService<YingPlayerBehavior>("/YingPlayer");
             yserver.AddWebSocketService<YingAdminBehavior>("/YingAdmin");
@@ -75,12 +75,14 @@ namespace Ying.YingWebsocket
             getYConsole().sendYMessage($"Ying Status {yserver.IsListening}");
 
             yrouter.yget("/Ying", (yrequest) => new YingResponse(".html", "YingYingYing"))
-                    .yget("/YingYing", (yrequest) => new YingResponse(".jpg", File.ReadAllBytes("zyy.jpg")));
+                    .yget("/YingYing", (yrequest) => new YingResponse(".jpg", File.ReadAllBytes("zyy.jpg")))
+                    .yget("/YingSkin", (yrequest) => new YingResponse(".png", File.ReadAllBytes("1347d919-71e3-378f-b4ed-54723819d15a.png")));
 
 
             YingYggdrasil.Ying();
 
-            getYConsole().sendYMessage(JsonConvert.SerializeObject(yserver.WebSocketServices));
+            getYConsole().sendYMessage(new YingUUID("Ying").YUUID.ToString());
+            getYConsole().sendYMessage(YingJsonFormat.Ying(JsonConvert.SerializeObject(yserver.WebSocketServices)));
 
 
 
