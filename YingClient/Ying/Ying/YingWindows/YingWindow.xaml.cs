@@ -32,24 +32,7 @@ namespace Ying
         {
             yframe.Navigate(new YingLoadingPage());
 
-            Action ynavigate = () => {
-                this.Dispatcher.Invoke(() =>
-                {
-                    if (YingConfig.YArgs.YAccount.yaccessToken == null)
-                    {
-                        yframe.Navigate(new YingLoginPage());
-                    }
-                    else
-                    {
-                        yframe.Navigate(new YingMainPage());
-                    }
-                });
-            };
-
-            if ("Ying" == "Ying")
-                yframe.Navigate(new YingMediaPage(new FileInfo($"{getYFiles().getYResources().ymedia}\\LON - 我的一个道姑朋友.mp4").FullName, ynavigate));
-            else
-                ynavigate.Invoke();
+            
 
             if (Environment.OSVersion.Version.Major == 10)
             {

@@ -12,7 +12,7 @@ namespace YingResolver
 {
     public class YingQQMusicResolver
     {
-
+        //http://music.163.com/song/media/outer/url?id=317151.mp3
         public String YUrl { get; }
 
         /// <summary>

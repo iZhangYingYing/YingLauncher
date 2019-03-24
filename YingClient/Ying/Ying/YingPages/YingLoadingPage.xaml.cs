@@ -20,7 +20,20 @@ namespace Ying.YingPages
     /// </summary>
     public partial class YingLoadingPage : Page
     {
-        private Frame yframe = (YingApp.Current.MainWindow as YingWindow).YFrame;
+        private static YingWindow ywindow = YingApp.Current.MainWindow as YingWindow;
+        private static Frame yframe = ywindow.YFrame;
+        private static Action ynavigate = () =>
+        {
+
+            if (YingConfig.YArgs.YAccount.yaccessToken == null)
+            {
+                yframe.Navigate(new YingLoginPage());
+            }
+            else
+            {
+                yframe.Navigate(new YingMainPage());
+            }
+        };
 
         public YingLoadingPage()
         {
@@ -41,6 +54,19 @@ namespace Ying.YingPages
 
                     new YingDownload(ydownload, yauthlib);
                 }
+            });
+
+            Task.Run(() =>
+            {
+                Thread.Sleep(new TimeSpan(0, 0, 6));
+                ywindow.Dispatcher.Invoke(() =>
+                {
+                    if ("Ying" == "Ying")
+                        yframe.Navigate(new YingMediaPage(new FileInfo($"{getYFiles().getYResources().ymedia}\\LON - 我的一个道姑朋友.mp4").FullName, ynavigate));
+                    else
+                        ynavigate.Invoke();
+                });
+
             });
         }
     }
